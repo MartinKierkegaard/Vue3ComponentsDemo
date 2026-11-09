@@ -7,7 +7,6 @@ const app = Vue.createApp({
                 { id: 2, title: "The Hobbit", author: "J.R.R. Tolkien", published: 1937 },
                 { id: 3, title: "Harry Potter and the Sorcerer's Stone", author: "J.K. Rowling", published: 1997 }
             ],
-            booksList: [],
             id:0,
             title:'',
             author:'',
@@ -32,17 +31,6 @@ const app = Vue.createApp({
             this.author = '';
             this.published = 0;
         },
-        ShowBooks(){
-            this.showBooksList = !this.showBooksList;
-            if(this.showBooksList == true){
-                // this.showBooksList = false;
-                 this.booksList = this.books;
-            } else {
-                // this.showBooksList = true;
-                this.booksList = [];
-            }
-           
-        }
     },
     computed: {
         myComputed() {
