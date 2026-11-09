@@ -12,7 +12,7 @@ const app = Vue.createApp({
             title:'',
             author:'',
             published:0,
-            showBooksList: false
+            showBooksList: true
             
         }
     },
@@ -33,14 +33,15 @@ const app = Vue.createApp({
             this.published = 0;
         },
         ShowBooks(){
-            this.showBooksList = !this.showBooksList;
-            if(this.showBooksList == true){
-                // this.showBooksList = false;
-                 this.booksList = this.books;
-            } else {
-                // this.showBooksList = true;
-                this.booksList = [];
-            }
+            this.showBooksList = true;
+            // this.showBooksList = !this.showBooksList;
+            // if(this.showBooksList == true){
+            //     // this.showBooksList = false;
+            //      this.booksList = this.books;
+            // } else {
+            //     // this.showBooksList = true;
+            //     this.booksList = [];
+            // }
            
         }
     },
