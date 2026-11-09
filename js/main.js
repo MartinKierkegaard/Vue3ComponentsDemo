@@ -8,42 +8,14 @@ const app = Vue.createApp({
                 { id: 3, title: "Harry Potter and the Sorcerer's Stone", author: "J.K. Rowling", published: 1997 }
             ],
             booksList: [],
-            id:0,
-            title:'',
-            author:'',
-            published:0,
-            showBooksList: true
-            
+            headerText: 'Add a new book to the list (TEMPLATE):'
         }
     },
     methods: {
-        myMethod(){
-
+        AddBook(book){
+            this.books.push(book);
+            console.log('Books:', this.books);
         },
-        AddBook(){
-            this.books.push({
-                id: this.id,
-                title: this.title,
-                author: this.author,
-                published: this.published
-            });
-            this.id = 0;
-            this.title = '';
-            this.author = '';
-            this.published = 0;
-        },
-        ShowBooks(){
-            this.showBooksList = true;
-            // this.showBooksList = !this.showBooksList;
-            // if(this.showBooksList == true){
-            //     // this.showBooksList = false;
-            //      this.booksList = this.books;
-            // } else {
-            //     // this.showBooksList = true;
-            //     this.booksList = [];
-            // }
-           
-        }
     },
     computed: {
         myComputed() {
