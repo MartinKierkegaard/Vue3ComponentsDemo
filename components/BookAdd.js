@@ -40,7 +40,7 @@ app.component('book-add', {
                 author: this.author,
                 published: this.published}
 
-            this.$emit('add-book', book);
+            this.$emit('add-book-event', book);
             this.id = 0;
             this.title = '';
             this.author = '';
